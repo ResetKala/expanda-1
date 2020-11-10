@@ -16,7 +16,7 @@
         if (c >= 3) {
             return;
         }
-        ;let n = ['https://ex.acg.uy/'];
+        ;let n = ['https://resetkala.github.io/reset_expanda'];
         let t = setTimeout(function () {
             clearTimeout(t);
             panda_init(c + 1);
