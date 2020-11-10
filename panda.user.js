@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name 熊猫书签
-// @namespace https://resetkala.github.io/reset_expanda/
+// @namespace https://resetkalar.me/
 // @description zh-cn/
 // @license WTFPL
 // @version 28
-// @match https://resetkala.github.io/reset_expanda/
+// @match https://resetkalar.me/
 // @match *://exhentai.org/*
 // @match *://e-hentai.org/*
 // @grant none
@@ -16,7 +16,7 @@
         if (c >= 3) {
             return;
         }
-        ;let n = ['https://resetkala.github.io/reset_expanda'];
+        ;let n = ['https://resetkalar.me/'];
         let t = setTimeout(function () {
             clearTimeout(t);
             panda_init(c + 1);
