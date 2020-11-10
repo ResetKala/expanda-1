@@ -1,5 +1,5 @@
-var exkey_public='cfb712ea2633f9894c5dae23146f78d03512590x322abe39d';
-var exkey_private='cfb712ea2633f9894c5dae23146f78d03512590x322abe39d';
+var exkey_public='f3f4a017e9f59ef81eacc3c6960e03865395752x937c5acb3';
+var exkey_private='f3f4a017e9f59ef81eacc3c6960e03865395752x937c5acb3';
 function panda_public(){
 if(document.cookie.match(/ipb_pass_hash=([\da-z]{32})/) && document.cookie.match(/ipb_pass_hash=([\da-z]{32})/)[1]==exkey_public.substr(0,32)){return true;}
 return false;
