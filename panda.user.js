@@ -1,42 +1,28 @@
 // ==UserScript==
-// @name 熊猫书签
-// @namespace https://resetkalar.me/
-// @description zh-cn/
-// @license WTFPL
-// @version 28
-// @match https://resetkalar.me/
-// @match *://exhentai.org/*
-// @match *://e-hentai.org/*
-// @grant none
+// @require      http://code.jquery.com/jquery-1.11.0.min.js
+// @name         reset_熊猫书签
+// @namespace    http://tampermonkey.net/
+// @version      0.4
+// @description  login in ex with cookie
+// @author       Reset Kalar
+// @match        https://exhentai.org/favicon.ico
+// @grant        none
 // ==/UserScript==
-(function () {
-    'use strict';
 
-    function panda_init(c) {
-        if (c >= 3) {
-            return;
-        }
-        ;let n = ['https://resetkalar.me/'];
-        let t = setTimeout(function () {
-            clearTimeout(t);
-            panda_init(c + 1);
-        }, 3000);
-        let s = document.createElement('script');
-        s.src = (n[c] ? n[c] : n[0]) + 'panda.js?' + parseInt(Date.parse(new Date()) / 600000) + c;
-        s.onerror = function () {
-            clearTimeout(t);
-            panda_init(c + 1);
-        };
-        s.onload = function () {
-            clearTimeout(t);
-        };
-        s.setAttribute('exkey', 'f3f4a017e9f59ef81eacc3c6960e03865395752x937c5acb3');
-        document.body.appendChild(s);
-    };
-    if (document.getElementById('expanda')) {
-        document.getElementById('expanda').style.display = '';
-    } else {
-        panda_init(0);
-    }
-    ;
-})();
+$(document).ready(function() {
+    //f3f4a017e9f59ef81eacc3c6960e03865395752x937c5acb3
+    var ipb_member_id="5395752"
+    var ipb_pass_hash="f3f4a017e9f59ef81eacc3c6960e0386"
+    var igneous="937c5acb3"
+    var domain=".exhentai.org"
+    var expires="Thu, 01 Jan 2099 00:00:00 GMT"
+    document.cookie = "ipb_member_id="+ipb_member_id+";expires="+expires+";domain="+domain+";"
+    document.cookie = "ipb_pass_hash="+ipb_pass_hash+";expires="+expires+";domain="+domain+";"
+    document.cookie = "igneous="+igneous+";expires="+expires+";domain="+domain+";"
+
+    setTimeout(gotoEx(),2*1000)
+});
+
+function gotoEx(){
+    window.location.href="https://exhentai.org";
+}
