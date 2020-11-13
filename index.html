@@ -72,9 +72,8 @@
 <body>
 
 <div class="chart">
-    <a id="button_monkey" href="javascript:;" onclick="setup('monkey');">油猴</a>
-    <a id="button_signup" href="javascript:;" onclick="setup('signup');">熊猫书签</a>
-    <a id="button_origin" href="javascript:;" onclick="setup('origin');">传统</a>
+    <a id="button_monkey" href="javascript:;" onclick="setup('monkey');" style="width: calc(100% / 2);">油猴</a>
+    <a id="button_signup" href="javascript:;" onclick="setup('signup');" style="width: calc(100% / 2);">熊猫书签</a>
 </div>
 <span id="signup">
 <div>
@@ -88,12 +87,11 @@
 </div>
 <div>
 <b>[账号注册]</b><br/>
-    <!--<b><a href="https://t.me/joinchat/AAAAAEfvh-S2UFGQQUAVBA" ><u>点击查看注册教程 v2</u></a>（中国大陆无法访问）</b><br />-->
-<b>账号访问权限只与注册时的IP有关，请使用欧美原生IP。</b><br/><br/><br/><br/>
-之前的注册教程（已修改误区）<br/>
+<b>账号访问权限只与注册时的IP有关，请使用欧美原生IP。</b><br/>
+注册教程<br/>
 注册地址：<a href="https://forums.e-hentai.org/?act=Reg" target="_blank"><u>https://forums.e-hentai.org/?act=Reg</u></a>
 中国大陆无法访问。<br/>
-使用<b>亚洲IP</b>注册的账户，无法获得里区权限。请使用欧美原生IP注册。<br/>
+一般情况下使用<b>亚洲IP</b>注册的账户，无法获得里区权限。请使用欧美原生IP注册。<br/>
 建议用Gmail邮箱注册，使用<b>163、QQ等国内邮箱</b>注册账户也可获得权限（但可能收不到注册邮件）。<br/>
 注册完成等待一周左右时间，账号应该就能获得里区权限，参照流程登录：<br/>
 使用<b>欧美原生IP</b>，清空<b>浏览器COOKIE</b>，先<a href="https://e-hentai.org/bounce_login.php"
@@ -101,27 +99,12 @@
                                                                                   target="_blank"><u><b>访问里站</b></u></a>。<br/>
 如果还出现白屏，多等一周换个欧美IP登录，再不行就是凉了。<br/>
 </div>
-    <!--<div>
-    <b>[密钥提取]</b><br />
-    示例格式：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa12345x1e2d3c<br />
-    <b>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</b>是<b>ipb_pass_hash</b>。<br />
-    <b>12345</b>是<b>ipb_member_id</b>。<br />
-    <b>x</b>是解析所需的<b>分隔符</b>。<br />
-    <b>1e2d3c</b>是<b>igneous</b>。<br />
-    使用电脑浏览器，<b>按上节教程登录里站</b>。按下<b>F12</b>，找到COOKIE：<br />
-    [Edge] Debug-Cookie-exhentai.org<br />
-    [Chrome] Application-Cookies-exhentai.org<br />
-    [Firefox] Storage-Cookies-exhentai.org<br />
-    复制<b>ipb_pass_hash</b>、<b>ipb_member_id</b>、<b>igneous</b>三个变量。<br />
-    按照格式规范组合成密钥，保存好就可以用了。<br />
-    </div>-->
 </span>
 <span id="monkey" style="display:none;">
 <div>
 <b>[安装插件]</b><br/>
 根据浏览器安装油猴插件：<br/>
 <a href="https://www.tampermonkey.net/" target="_blank"><u><b>Tampermonkey</b></u></a><br/>
-iOS系统只能使用<a href="javascript:;" onclick="setup('origin');"><u>传统书签</u></a>。<br/>
 Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_blank"><u>Firefox</u></a>。<br/>
 </div>
 <div>
@@ -129,7 +112,7 @@ Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_bla
 为油猴添加熊猫书签脚本：<br/>
 <a id="monkey_link" target="_blank"><u><b>添加脚本</b></u></a><br/>
     然后返回本页面点击下面的进入里站<br/>
-    脚本执行一次即可<br/>
+    脚本执行一次即可关闭<br/>
 </div>
 <div>
 <b>[解锁里站]</b><br/>
@@ -138,33 +121,20 @@ Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_bla
 <a href="https://exhentai.org/favicon.ico"><b>进入里站</b></a>
 </div>
 </span>
-<span id="origin" style="display:none;">
-<div>
-<b>[复制代码]</b><br/>
-<input id="origin_code" onclick="this.select();this.setSelectionRange(0,99999);" placeholder="生成中..."/><br/>
-</div>
-<div>
-<b>[创建书签]</b><br/>
-把本页添加至书签。<br/>
-点击浏览器地址栏。<br/>
-找到刚才添加的书签，长按，编辑。<br/>
-使用刚才复制的代码，替换原有地址。<br/>
-</div>
-<div>
-<b>[解锁里站]</b><br/>
-点击地址栏，运行熊猫书签。<br/>
-跳转图标页，再次运行熊猫书签。<br/>
-</div>
-</span>
 <div>
     <b>[常见问题]</b><br/>
     这里收集了一些使用E站时常见的错误。<br/>
     <b>网络封锁：链接被重置</b><br/>
     直接访问跳转至被墙的表站，请使用熊猫书签。<br/>
+    直接访问显示err_connection_reset，可能被本地运营商ban了，请挂代理访问。<br/>
     <b>无权访问：白屏或“err”</b><br/>
-    地域拦截或账号失效，请尝试断开V:P!И访问。<br/>
+    地域拦截或账号失效，请尝试断开代理访问。<br/>
+    如确认账号失效，请联系我<br/>
     <b>流量超限：509 Bandwidth Limit Exceeded</b><br/>
     浏览了过多图片，请等待配额恢复或更换IP。<br/>
+    本账号配额为默认两倍，这种情况应该很少。<br/>
+    <b>IP被ban：IP address has been temporarily banned</b><br/>
+    有人用该IP扒图导致IP暂时被ban，请切换代理节点。<br/>
 </div>
 <div class="chart">
     <a href="https://t.me/joinchat/AAAAAEfvh-S2UFGQQUAVBA/" target="_blank">Telegram 频道</a>
@@ -199,22 +169,7 @@ Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_bla
         document.getElementById('button_' + element).style.fontWeight = 'bold';
         document.getElementById(element).style.display = '';
         document.getElementById('monkey_link').href = 'panda.user.js';
-        if (element == 'origin') {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'config?' + parseInt(Date.parse(new Date()) / 60000), true);
-            xhr.onerror = function (e) {
-                console.log('network_error');
-            };
-            xhr.onreadystatechange = function (e) {
-                if (this.readyState === 4 && this.status === 200) {
-                    var obj = JSON.parse(this.responseText);
-                    var txt = obj.origin.replace(/`func`/g, obj.func).replace(/`node`/g, obj.node).replace(/`key`/g, (exkey ? 's.setAttribute(\'exkey\',\'' + exkey + '\');' : '')).replace(/`web`/g, obj.node[0]);
-                    document.getElementById('origin_code').value = txt;
-                }
-            };
-            xhr.send();
-        }
-        ;
+
     };
     var current = null;
     setup('signup');
