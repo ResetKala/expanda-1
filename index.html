@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="zh_CN">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
@@ -72,8 +72,8 @@
 <body>
 
 <div class="chart">
-    <a id="button_monkey" href="javascript:;" onclick="setup('monkey');" style="width: calc(100% / 2);">油猴</a>
-    <a id="button_signup" href="javascript:;" onclick="setup('signup');" style="width: calc(100% / 2);">熊猫书签</a>
+    <a id="button_monkey" href="javascript:" onclick="setup('monkey');" style="width: calc(100% / 2);">油猴</a>
+    <a id="button_signup" href="javascript:" onclick="setup('signup');" style="width: calc(100% / 2);">熊猫书签</a>
 </div>
 <span id="signup">
 <div>
@@ -84,7 +84,7 @@
 </div>
 <div>
 <b>[密钥绑定]</b><br/>
-<input disabled id="exkey" placeholder="使用公共账号" oninput="check(this.value);"/><br/>
+<label for="exkey"></label><input disabled id="exkey" placeholder="使用公共账号" oninput="check(this.value);"/><br/>
 </div>
 <div>
 <b>[账号注册]</b><br/>
@@ -145,7 +145,7 @@ Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_bla
     本账号配额为默认两倍，这种情况应该很少<br/>
     <b>IP被ban：IP address has been temporarily banned</b><br/>
     有人用该IP扒图导致IP暂时被ban，请切换代理节点<br/>
-    <b>其余相关问题可以查阅<a href="https://ehwiki.org/wiki/Main_Page"><u>ehwiki</u></a></b><br/>
+    <b>其余相关问题可以查阅<a href="https://ehwiki.org/wiki/Main_Page" target="_blank"><u>ehwiki</u></a></b><br/>
 </div>
 <div class="chart">
     <a href="https://t.me/joinchat/AAAAAEfvh-S2UFGQQUAVBA/" target="_blank">Telegram 频道</a>
@@ -159,30 +159,29 @@ Chrome商店进不去请改用<a href="https://www.firefox.com.cn/" target="_bla
             window.location.hash = '';
             return false;
         }
-        ;
+
         document.getElementById('button_signup').style.color = '#228B22';
         window.location.hash = exkey;
         return exkey;
-    };
+    }
 
     function setup(element) {
         var exkey = check(window.location.hash ? window.location.hash.substr(1) : '');
         if (exkey) {
             document.getElementById('exkey').value = exkey;
         }
-        ;
-        if (current && current != element) {
+
+        if (current && current !== element) {
             document.getElementById('button_' + current).style.fontWeight = '';
             document.getElementById(current).style.display = 'none';
         }
-        ;
+
         current = element;
         document.getElementById('button_' + element).style.fontWeight = 'bold';
         document.getElementById(element).style.display = '';
         document.getElementById('monkey_link').href = 'panda.user.js';
         document.getElementById('host_link').href = 'eHostAdd.bat';
-
-    };
+    }
     var current = null;
     setup('signup');
 </script>
